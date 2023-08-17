@@ -18,7 +18,7 @@ import (
 	blake2b "github.com/minio/blake2b-simd"
 )
 
-const replicationFactor = 10
+const replicationFactor = 50
 
 var ErrNoHosts = errors.New("no hosts added")
 
