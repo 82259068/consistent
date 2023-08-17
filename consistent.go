@@ -128,6 +128,17 @@ func (c *Consistent) search(key uint64) int {
 	}
 	return idx
 }
+// check host whether exist
+func (c *Consistent) CheckHostExist(chost string) (rslt string) {
+	c.RLock()
+	defer c.RUnlock()
+	for k, _ := range c.loadMap {
+		if chost==k{
+			return k
+		}
+	}
+	return ""
+}
 
 // Sets the load of `host` to the given `load`
 func (c *Consistent) UpdateLoad(host string, load int64) {
