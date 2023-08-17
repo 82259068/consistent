@@ -1,4 +1,4 @@
-module github.com/lafikl/consistent
+module github.com/82259068/consistent
 
 go 1.16
 
